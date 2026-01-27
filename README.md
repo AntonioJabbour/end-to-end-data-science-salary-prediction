@@ -42,116 +42,72 @@ end-to-end-data-science-salary-prediction/
 ├── README.md
 └── requirements.txt
 ```
-Methodology
-1. Data Understanding & Quality Checks
+## Methodology
+### 1. Data Understanding & Quality Checks
+- Inspected dataset structure and data types
+- Checked for missing values and duplicates
+- Removed non-informative index columns
+- Reviewed feature distributions and ranges
 
-Inspected dataset structure and data types
+### 2. Exploratory Data Analysis (EDA)
+- Analyzed overall salary distribution
+- Compared salaries across experience levels, job roles, company sizes, and remote work ratios
+- Identified outliers and non-linear relationships
 
-Checked for missing values and duplicates
+### 3. Data Cleaning & Feature Engineering
+- Selected salary_in_usd as the prediction target
+- Applied ordinal encoding for ordered categorical features
+- Applied one-hot encoding for nominal categorical features
+- Prepared numerical features for modeling
 
-Removed non-informative index columns
+### 4. Modeling
+- Built a baseline Linear Regression model
+- Trained advanced regression models
+- Used a consistent train–test split
+- Evaluated models using:
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- R² score
 
-Reviewed feature distributions and ranges
+### 5. Model Selection
+- Random Forest Regressor achieved the best overall performance
+- Showed lower prediction error and higher explained variance
+- Selected as the final model
 
-2. Exploratory Data Analysis (EDA)
+### 6. Model Interpretation
+- Interpreted model results using EDA findings
+- Identified key salary drivers
+- Translated technical results into business insights
 
-Analyzed overall salary distribution
+### Key Insights
+- Experience level is a strong driver of salary
+- Job specialization significantly impacts compensation
+- Medium and large companies tend to offer higher salaries
+- Fully remote roles often provide competitive pay
+- Salary data exhibits non-linear patterns
 
-Compared salaries across experience levels, job roles, company sizes, and remote work ratios
+### Results
+- Random Forest achieved the lowest MAE and RMSE
+- Highest R² score among evaluated models
+- Demonstrates suitability of tree-based models for salary prediction
 
-Identified outliers and non-linear relationships
+### Limitations
+- Limited dataset size
+- External factors (cost of living, negotiation, company revenue) not included
+- Some job titles and locations are underrepresented
+- Predictions represent salary ranges, not exact values
 
-3. Data Cleaning & Feature Engineering
+### Future Improvements
+- Hyperparameter tuning and cross-validation
+- Experiment with Gradient Boosting, XGBoost, or LightGBM
+- Add cost-of-living or economic indicators
+- Build a production-ready pipeline
+- Create an interactive dashboard
 
-Selected salary_in_usd as the prediction target
+### Reproducibility
+- The notebook can be run end-to-end
+- All steps are documented clearly
+- Random seeds were fixed for reproducibility
 
-Applied ordinal encoding for ordered categorical features
-
-Applied one-hot encoding for nominal categorical features
-
-Prepared numerical features for modeling
-
-4. Modeling
-
-Built a baseline Linear Regression model
-
-Trained advanced regression models
-
-Used a consistent train–test split
-
-Evaluated models using:
-
-Mean Absolute Error (MAE)
-
-Root Mean Squared Error (RMSE)
-
-R² score
-
-5. Model Selection
-
-Random Forest Regressor achieved the best overall performance
-
-Showed lower prediction error and higher explained variance
-
-Selected as the final model
-
-6. Model Interpretation
-
-Interpreted model results using EDA findings
-
-Identified key salary drivers
-
-Translated technical results into business insights
-
-Key Insights
-
-Experience level is a strong driver of salary
-
-Job specialization significantly impacts compensation
-
-Medium and large companies tend to offer higher salaries
-
-Fully remote roles often provide competitive pay
-
-Salary data exhibits non-linear patterns
-
-Results
-
-Random Forest achieved the lowest MAE and RMSE
-
-Highest R² score among evaluated models
-
-Demonstrates suitability of tree-based models for salary prediction
-
-Limitations
-
-Limited dataset size
-
-External factors (cost of living, negotiation, company revenue) not included
-
-Some job titles and locations are underrepresented
-
-Predictions represent salary ranges, not exact values
-
-Future Improvements
-
-Hyperparameter tuning and cross-validation
-
-Experiment with Gradient Boosting, XGBoost, or LightGBM
-
-Add cost-of-living or economic indicators
-
-Build a production-ready pipeline
-
-Create an interactive dashboard
-
-Reproducibility
-
-The notebook can be run end-to-end
-
-All steps are documented clearly
-
-Random seeds were fixed for reproducibility
-
-Author
-Antonio Jabbour
+## Author
+**Antonio Jabbour**
