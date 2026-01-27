@@ -41,7 +41,7 @@ end-to-end-data-science-salary-prediction/
 │
 ├── README.md
 └── requirements.txt
-
+```
 Methodology
 1. Data Understanding & Quality Checks
 
